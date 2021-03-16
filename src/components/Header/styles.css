@@ -1,0 +1,8 @@
+.header {
+    grid-area: header;
+    background-color: #F7F8FC;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+}
