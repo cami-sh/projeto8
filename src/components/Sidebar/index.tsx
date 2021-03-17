@@ -1,5 +1,7 @@
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { ReactComponent as Logo } from '../../svg/logo.svg' 
+import { ReactComponent as LogoG } from '../../svg/logo_g.svg'
 import './styles.css'
 
 const Sidebar = () => {
@@ -7,7 +9,9 @@ const Sidebar = () => {
 
     return(
         <aside className='sidenav'>
-            {isLogged && 
+            {isLogged ? 
+                <>
+                <Logo className="logo"/>
                 <ul className='sidenav_list'>
 
                     <li className='sidenav_list-item'>
@@ -30,6 +34,8 @@ const Sidebar = () => {
                     </li>
                     }
                 </ul>
+                </>
+                : <LogoG className='logoG' />
             }
         </aside>
     )

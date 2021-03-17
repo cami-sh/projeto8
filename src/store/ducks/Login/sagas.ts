@@ -25,6 +25,6 @@ export function* postLogin(action: any) {
         yield put(postLoginSuccess(userData.data))
         
     } catch (erro) {
-        yield put(postLoginFailure)
+        yield put(postLoginFailure())
     }
 }

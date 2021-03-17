@@ -11,7 +11,7 @@ export function* getUsers() {
         const response: AxiosResponse = yield call(UsersService.getUsers)
         yield put(getUsersSuccess(response.data))
     } catch (erro) {
-        yield put(getUsersFailure)
+        yield put(getUsersFailure())
     }
 }
 
@@ -31,7 +31,7 @@ export function* postUser(action: any) {
         
         yield put(postUserSuccess(newUser))
     } catch (erro) {
-        yield put(postUserFailure)
+        yield put(postUserFailure())
     }
 }
 
@@ -40,6 +40,6 @@ export function* deleteUser(action:any) {
         yield call(UsersService.deleteUser, action.payload)
         yield put(deleteUserSuccess(action.payload))
     } catch (erro) {
-        yield put(deleteUserFailure)
+        yield put(deleteUserFailure())
     }
 }

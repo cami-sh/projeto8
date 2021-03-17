@@ -7,7 +7,7 @@
 
 .sidenav_list {
     padding: 0;
-    margin-top: 85px;
+    margin-top: 30px;
     list-style-type: none;
 }
 
@@ -18,4 +18,13 @@
 
 .sidenav_list-link {
     color: white;
+}
+
+.logo {
+    padding: 20px 0px 0px 30px;
+}
+
+.logoG {
+    padding-top: 20px;
+    align-self: center;
 }

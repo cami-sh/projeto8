@@ -1,12 +1,16 @@
-form {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    max-width: 500px;
+.titleLogin {
     padding: 30px 50px;
 }
 
-input {
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    max-width: 500px;
+    padding: 0px 50px;
+}
+
+.inputText {
     border: 1px solid #d9d9d9;
     border-radius: 4px;
     box-sizing: border-box;
@@ -24,7 +28,7 @@ label {
     margin-top: 10px;
 }
 
-button {
+.buttonForms {
     background-color: #6976d9;
     color: white;
     font-family: sans-serif;

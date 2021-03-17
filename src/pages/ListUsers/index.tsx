@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getUsersRequest , deleteUserRequest } from '../../store/ducks/Users/actions'
 import { User } from '../../store/ducks/Users/types'
 import { Redirect } from 'react-router-dom'
+import Header from '../../components/Header'
+import './styles.css'
 
 const ListUsers = () => {
 
@@ -18,25 +20,34 @@ const ListUsers = () => {
     const deleteUser = (id: number) => {
         dispatch(deleteUserRequest(id))
     }
-    console.log(isLogged)
 
     return (
+        <>
+        <Header props={'Usuários'} />
         <main className='main'>
         {isLogged ? 
             
             <>{role === 'admin' ?
-            <>
+            <table>
+            <tbody>
+                <tr>
+                    <th>Nome</th>
+                    <th>Permissão</th>
+                </tr>
                 {arrayUsers?.map((item: User) => (
-                    <li key={item.id}>
-                        {item.name} - {item.role}
-                        <button onClick={() => deleteUser(item.id)}>X</button>
-                    </li>
+                    <tr key={item.id}>
+                        <th>{item.name}</th>
+                        <th>{item.role}</th>
+                        <th><button onClick={() => deleteUser(item.id)}>X</button></th>
+                    </tr>
                 ))} 
-            </> : <Redirect to='/home' />}
+            </tbody>
+            </table> : <Redirect to='/home' />}
             </>
              : <Redirect to="/" />
         }
         </main>
+        </>
     )
 }
 

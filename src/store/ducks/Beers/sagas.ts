@@ -10,7 +10,7 @@ export function* getBeers() {
         const response: AxiosResponse = yield call(BeerService.getBeers)
         yield put(getBeersSuccess(response.data))
     } catch (erro) {
-        yield put(getBeersFailure)
+        yield put(getBeersFailure())
     }
 }
 
@@ -19,7 +19,7 @@ export function* postBeer(action: any) {
         const response: AxiosResponse = yield call(BeerService.postBeer, action.payload)
         yield put(postBeerSuccess(response.data))
     } catch (erro) {
-        yield put(postBeerFailure)
+        yield put(postBeerFailure())
     }
 }
 
@@ -28,6 +28,6 @@ export function* deleteBeer(action: any) {
         yield call(BeerService.deleteBeer, action.payload)
         yield put(deleteBeerSuccess(action.payload))
     } catch (erro) {
-        yield put(deleteBeerFailure)
+        yield put(deleteBeerFailure())
     }
 }

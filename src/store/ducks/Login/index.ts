@@ -29,6 +29,14 @@ const reducerLogin: Reducer = (state = initialState, action) => {
                 loading: false,
                 error: true
             }
+        case TypesLogin.LOGOUT:
+            return {
+                ...state,
+                name: '',
+                role: '',
+                id: '',
+                isLogged: false
+            }
         default:
             return state
     }

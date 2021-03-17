@@ -27,3 +27,11 @@ npm start
 ```
 
 Pronto! O projeto irá rodar no servidor local e você poderá testar suas funcionalidades :D
+
+## Logins para teste
+
+### Login administrador
+E-mail: helen@facebook.com | Senha: 123123
+
+### Login editor
+E-mail: mauricio@google.com | Senha: 123123
